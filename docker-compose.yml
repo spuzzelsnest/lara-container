@@ -12,9 +12,9 @@ services:
     image: ww2maps
     container_name: ww2maps-app
     restart: unless-stopped
-    working_dir: /var/www/html
+    working_dir: /var/www
     volumes:
-      - ./src:/var/www/html
+      - ./src:/var/www
     networks:
       - laravel
 
@@ -26,7 +26,7 @@ services:
     ports:
       - 8000:80
     volumes:
-      - ./src:/var/www/html
+      - ./src:/var/www
       - ./dockerfiles/nginx:/etc/nginx/conf.d
     networks:
       - laravel
