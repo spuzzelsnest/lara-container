@@ -35,10 +35,7 @@ RUN chown -R $user:$user /var/www/
 # Git clone
 RUN git clone https://github.com/spuzzelsnest/ww2web.git /var/www/html
 
-
-# Create extra directories 
-RUN pwd
-RUN whoami
+# Create extra directories
 RUN mkdir -p /var/www/.core/bootstrap/cache
 RUN mkdir -p /var/www/.core/storage/framework/sessions
 RUN mkdir -p /var/www/.core/storage/framework/views
