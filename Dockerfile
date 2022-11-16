@@ -30,7 +30,7 @@ RUN chown -R $user:$user /var/www/
 #RUN usermod -u $uid $user
 
 # Set working directory
-RUN rm -rf /var/www/*
+RUN rm ls -A1 /var/www/ | xargs rm -rf
 WORKDIR /var/www
 
 # Git clone
@@ -50,7 +50,7 @@ RUN chmod 777 /var/www/.core/storage/framework/views
 RUN chmod 777 /var/www/.core/bootstrap/cache
 
 # copy to source folder
-COPY .  /var/www/
+COPY . src/  
 COPY --chown=$user:www-data . /var/www
 
 # Load User
