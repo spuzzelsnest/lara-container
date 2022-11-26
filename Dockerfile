@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     apt-utils \
     build-essential \
     nano \
+    cron \
     git \
     curl \
     libpng-dev \
